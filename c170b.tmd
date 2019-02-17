@@ -604,10 +604,13 @@
             >
             <[input_default][FlapsInput][]
                 <[string8][Input][Controls.Flaps]>
+                <[tmvector2d][Range][ 0.0 1.0 ]>
+                <[uint][Positions][3]>
+                <[float64][Value][0.0]>					
             >
             <[linear_interpolation][FlapsMapping][]
                 <[string8][Input][FlapsInput.Output]>
-                <[tmvector2d][Map][ (0.0 0.0) (0.5 0.26) (1.0 0.873) ]>
+                <[tmvector2d][Map][ (0.0 0.0) (0.5 0.2) (1.0 0.4) ]>
             >
             <[sender][SenderFlapPosition][]
                 <[string8][Input][FlapsMapping.Output]>
@@ -3305,7 +3308,33 @@
                 <[uint32][VelocityID][Fuselage.V]>
                 <[string8][SoundFile][ground_roll.wav]>
             >
-
+			
+            // flap lever
+            <[soundinput][FlapLeverPullSound][]
+                <[string8][InputID][FlapLeverPullSound.Output]>
+            >
+            <[sound_multi][SoundFlapLeverPull][]
+                <[uint32][PositionID][Fuselage.R]>
+                <[uint32][VelocityID][Fuselage.V]>
+                <[string8][InputTrigger][FlapLeverPullSound.Output]>
+                <[string8][InputVolume] [0.01]>
+                <[string8][InputPitch]  [0.6]>
+                <[string8][SoundFile][flap.wav]>
+                <[bool][External][false]>
+            >
+            <[soundinput][FlapLeverReleaseSound][]
+                <[string8][InputID][FlapLeverReleaseSound.Output]>
+            >			
+            <[sound_multi][SoundFlapLeverRelease][]
+                <[uint32][PositionID][Fuselage.R]>
+                <[uint32][VelocityID][Fuselage.V]>
+                <[string8][InputTrigger][FlapLeverReleaseSound.Output]>
+                <[string8][InputVolume] [0.4]>
+                <[string8][InputPitch]  [1.2]>
+                <[string8][SoundFile][flap.wav]>
+                <[bool][External][false]>
+            >
+			
             // button and switches
             <[soundinput][ButtonSound][]
                 <[uint32][InputID][ButtonSound.Output]>
