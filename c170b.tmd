@@ -661,7 +661,6 @@
                 <[tmvector2d][Range][ -1.0 1.0 ]>
             >	
             <[input_default][AileronTrimInput][]
-                <[tmvector2d][Range][ -1.0 1.0 ]>
                 <[string8][Input][Controls.AileronTrim]>
                 <[uint][Positions][201]>
                 <[tmvector2d][Range][ -1.0 1.0 ]>
@@ -669,7 +668,6 @@
                 <[float64][Speed][0.125]>			
             >
             <[input_default][RudderTrimInput][]
-                <[tmvector2d][Range][ -1.0 1.0 ]>
                 <[string8][Input][Controls.RudderTrim]>
                 <[uint][Positions][201]>
                 <[tmvector2d][Range][ -1.0 1.0 ]>
@@ -867,7 +865,6 @@
                 <[float64][Friction][0.0]>
             >
 
-
             // Engines
   
             <[engine][Engine][]
@@ -882,8 +879,17 @@
                 <[float64][RatedPower][108126]>
                 <[float64][Displacement][0.001949]>
             >
-
-
+            <[output][RotationSpeed][]
+                <[string8][Input][DriveShaft.GetRotationSpeed]>
+            >
+            <[product][NormalizedPropellerSpeed][]
+                <[string8][Inputs][ DriveShaft.RotationSpeed 0.00641 ]>  // = 1/RatedRotationSpeed 
+            >
+            <[sender][SenderPower][]
+                <[string8][Input][NormalizedPropellerSpeed.Output]>
+                <[string8][Message][Aircraft.Power]>
+            >
+			
             // Indicators & outputs
   
             <[pitot_tube][PitotTube][]
@@ -995,18 +1001,6 @@
             <[output][VerticalSpeedIndicatorNeedle][]
                 <[string8][Input][VerticalSpeedIndicator.VerticalSpeed]>
             >
-
-            <[output][RotationSpeed][]
-                <[string8][Input][DriveShaft.GetRotationSpeed]>
-            >
-            <[product][NormalizedPropellerSpeed][]
-                <[string8][Inputs][ DriveShaft.RotationSpeed 0.00641 ]>  // = 1/RatedRotationSpeed 
-            >
-            <[sender][SenderPower][]
-                <[string8][Input][NormalizedPropellerSpeed.Output]>
-                <[string8][Message][Aircraft.Power]>
-            >
-  
 
             // Systems control - begin
 
@@ -2873,7 +2867,7 @@
                 <[tmvector2d][Map][(28.1 -2.882378) (29.92 0.0) (31.0 1.710423)]>
             >
             <[hingedbodygraphics][AltimeterSettingNeedle][]
-                <[string8][GeometryList][ alt_press  ]>
+                <[string8][GeometryList][ alt_press ]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
                 <[string8][InputAngle][AltimeterSettingMapping.Output]>
@@ -2881,7 +2875,7 @@
                 <[tmvector3d][Pivot][0.5931 0.1187 0.2843]>
             >
             <[hingedbodygraphics][Altimeter100Needle][]
-                <[string8][GeometryList][ alt_100  ]>
+                <[string8][GeometryList][ alt_100 ]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
                 <[uint32][AngleID][AltimeterNeedle.Output]>
@@ -2890,7 +2884,7 @@
                 <[tmvector3d][Pivot][0.5931 0.1187 0.2843]>
             >
             <[hingedbodygraphics][Altimeter1kNeedle][]
-                <[string8][GeometryList][ alt_1k  ]>
+                <[string8][GeometryList][ alt_1k ]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
                 <[uint32][AngleID][AltimeterNeedle.Output]>
@@ -2899,7 +2893,7 @@
                 <[tmvector3d][Pivot][0.5931 0.1187 0.2843]>
             >
             <[hingedbodygraphics][Altimeter10kNeedle][]
-                <[string8][GeometryList][ alt_10k  ]>
+                <[string8][GeometryList][ alt_10k ]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
                 <[uint32][AngleID][AltimeterNeedle.Output]>
@@ -2936,11 +2930,17 @@
             >
 			
 			// CLOCK gauge
+            <[graphics_input][LocalTime][]
+                <[uint32][InputID][LocalTime.Output]>
+            >
+            <[graphics_sec_to_hms][Watch][]
+                <[string8][Input][LocalTime.Output]>
+            >			
             <[hingedbodygraphics][SecondsWatch][]
                 <[string8][GeometryList][ clock_sec ]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
-                <[uint32][AngleID][Clock.Output]>
+                <[string8][InputAngle][Watch.Seconds60]>	
                 <[float64][AngleMax][0.104667]>
                 <[tmvector3d][Axis][-0.992746 0.0 0.120229]>
                 <[tmvector3d][Pivot][0.5776 0.1714 0.1586]>
@@ -2949,7 +2949,7 @@
                 <[string8][GeometryList][ clock_min ]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
-                <[uint32][AngleID][Clock.Output]>
+                <[string8][InputAngle][LocalTime.Output]>
                 <[float64][AngleMax][0.001744]>
                 <[tmvector3d][Axis][-0.992746 0.0 0.120229]>
                 <[tmvector3d][Pivot][0.5776 0.1714 0.1586]>
@@ -2958,7 +2958,7 @@
                 <[string8][GeometryList][ clock_hour ]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
-                <[uint32][AngleID][Clock.Output]>
+                <[string8][InputAngle][LocalTime.Output]>
                 <[float64][AngleMax][0.00014537037]>
                 <[tmvector3d][Axis][-0.992746 0.0 0.120229]>
                 <[tmvector3d][Pivot][0.5776 0.1714 0.1586]>
@@ -2984,7 +2984,7 @@
 			
 			// DG gauge
             <[hingedbodygraphics][DGsNeedle][]
-                <[string8][GeometryList][  dg-1_rose ]>
+                <[string8][GeometryList][ dg-1_rose ]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
                 <[string8][AngleID][HeadingAngle.Output]>
@@ -2992,7 +2992,7 @@
                 <[tmvector3d][Pivot][0.5770 0.0709 0.1365]>
             >
             <[rigidbodygraphics][DGsPlane][]
-                <[string8][GeometryList][  dg-3_plane ]>
+                <[string8][GeometryList][ dg-3_plane ]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
             >
