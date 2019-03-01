@@ -67,7 +67,6 @@
                 <[tmvector3d][Direction][ 0.8872 0.0 -0.4614 ]>
             >
 
-
             // Rigidbodies
 
             <[rigidbody][Fuselage][]
@@ -540,7 +539,6 @@
                 <[float64][GroundEffectScale][1.0]>
             >
 
-
             // Aerofuselage
   
             <[aerofuselage][FuselageAero][]
@@ -558,7 +556,6 @@
                 <[float64][Clz][ 1.5 ]>
                 <[float64][Cm][ 0.0 ]>
             >
-
 
             // Control Inputs
 
@@ -696,7 +693,6 @@
                 <[tmvector2d][Range][ -1.0 1.0 ]>
             >
 
-
             // Servos
   
             <[servolinear][ServoCheck][]
@@ -817,7 +813,6 @@
                 <[float64][P2][0.0]>
                 <[float64][P3][0.0]>
             >
-
 
             // Propulsors
   
@@ -2463,8 +2458,8 @@
             >  
 			
 			//Left Gear
-            <[rigidbodygraphics][Strut_L_8][]
-                <[string8][GeometryList][ strut_l_8 ]>
+            <[rigidbodygraphics][LeftStrut][]
+                <[string8][GeometryList][ strut_l_8 _fairing_l_8 ]>
                 <[uint32][PositionID][LeftGear.R]>
                 <[uint32][OrientationID][LeftGear.Q]>
             >
@@ -2478,8 +2473,8 @@
             >
 			
 			//Right Gear
-            <[rigidbodygraphics][Strut_R_8][]
-                <[string8][GeometryList][ strut_r_8 ]>
+            <[rigidbodygraphics][RightStrut][]
+                <[string8][GeometryList][ strut_r_8 _fairing_r_8 ]>
                 <[uint32][PositionID][RightGear.R]>
                 <[uint32][OrientationID][RightGear.Q]>
             >
