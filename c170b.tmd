@@ -1370,7 +1370,7 @@
                 <[string8][InputVoltage1][MainBus.Output]>
                 <[string8][AddLoad0][AlternatorBus.AddLoad]>
                 <[string8][AddLoad1][MainBus.AddLoad]>
-            >zzzzzzzzZZZZZZ
+            >
 
             // alternator bus end
 
