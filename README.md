@@ -17,6 +17,7 @@ GliderEngine button - turn on/off engines, open/close doors.
 
 Change simulation level to turn on/off GPS and wheel fairings.
 
+Aircraft Technical Data & Specifications: http://www.airliners.net/aircraft-data/cessna-170/139
 
 General characteristics: 
   Length: 24 ft 11.5 in (7.61 m) 
