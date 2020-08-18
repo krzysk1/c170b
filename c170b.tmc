@@ -1,10 +1,10 @@
 ﻿<[file][][]
     <[object][][]
         <[int][Version][210]>
-        <[vec32array][ContactSpheres][ (0.5041 1.1553 -1.3678 0.2443) (0.5041 -1.1553 -1.3678 0.2443) (-5.8241 0.0 -0.4392 0.1283) ]>
+        <[vec32array][ContactSpheres][ (0.504 1.155 -1.368 0.244) (0.504 -1.155 -1.368 0.244) (-5.824 0.0 -0.439 0.128) ]>
         <[string8][DisplayName][Cessna 170B]>
-        <[string8][DescriptionTextEN][The Cessna 170 is a light, single-engined, general aviation aircraft produced by the Cessna Aircraft Company between 1948 and 1956. 
-		For AeroflyFS2 made by Krzysztof Kaniewski. Original 3D model by Alcalá Simulación (please visit www.alcala-sim.com).]>
+        <[string8][DescriptionTextEN][The Cessna 170 is a light, single-engined, general aviation aircraft produced by the Cessna Aircraft Company between 1948 and 1956. Over 5,000 Cessna 170s were built and over 2,000 are still in service today.
+For AeroflyFS2 made by Krzysztof Kaniewski. Original 3D model by Alcalá Simulación (please visit www.alcala-sim.com).]>
 		<[float64][WingSpan][10.97]>
 		<[float64][Mass][647]>
 		<[float64][MaximumSpeed][62.0]>
