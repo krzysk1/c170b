@@ -3,14 +3,14 @@ Cessna 170b
 
 The Cessna 170 is a light, single-engined, general aviation aircraft produced by the Cessna Aircraft Company between 1948 and 1956.	(From Wikipedia, the free encyclopedia)
 
-This is free add-on for Aerofly FS2 developed by Krzysztof Kaniewski, 3D model by Adrian Fernandez Gomez (Alcalá Simulación, www.alcala-sim.com).
+This is free add-on for Aerofly FS4 developed by Krzysztof Kaniewski, 3D model by Adrian Fernandez Gomez (Alcalá Simulación, www.alcala-sim.com).
 
- Some features may not work as intended and this aircraft could crash your Aerofly FS2. 
+ Some features may not work as intended and this aircraft could crash your Aerofly FS4. 
  Use it at your own risk!
 
 Installation
 
-1. Unzip file and move the folder "c170b" to C:\Users\~\Documents\Aerofly FS2\aircraft.
+1. Unzip file and move the folder "c170b" to C:\Users\~\Documents\Aerofly FS4\aircraft.
 
 Tips:
 GliderEngine button - turn on/off engines, open/close doors.
