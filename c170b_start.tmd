@@ -1,0 +1,29 @@
+<[file][][]
+    <[modelmanager][][]
+        <[pointer_list_tmuniverse][DynamicObjects][]
+
+            // trim
+            <[input_default][PitchTrim][95]
+                <[float64][Value][0.0]>
+            >
+
+            // lights
+            <[input_switch][StrobeLightSwitch][0]
+                <[float64][Value][1.0]>
+            >
+            <[input_switch][BeaconLightSwitch][0]
+                <[float64][Value][1.0]>
+            >
+            <[input_switch][NavigationLightSwitch][0]
+                <[float64][Value][1.0]>
+            >
+            <[input_switch][LandingLightSwitch][0]
+                <[float64][Value][1.0]>
+            >
+            <[input_switch][TaxiLightSwitch][0]
+                <[float64][Value][1.0]>
+            >
+        >
+    >
+>
+
