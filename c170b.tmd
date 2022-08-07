@@ -4,7 +4,7 @@
 	// Plane: Cessna 170B
 	// Original 3D model: Alcala Simulacion
 	// Aerofly FS4 adaptation: Krzysztof Kaniewski
-	// Date: Nov 2015 - Jul 2022
+	// Date: Nov 2015 - Aug 2022
 	//-------------------------------------
 
     <[modelmanager][][]
@@ -114,24 +114,14 @@
                 <[tmvector3d][R0][-0.498577 4.440412 0.882105]>
                 <[tmmatrix3d][B0][0.999048 0.043619 0.0 -0.043619 0.997679 0.052336 0.0 -0.052336 0.998630]>
             >
-            <[jointlinear][JointFuselageLeftWing2][]
-                <[tmvector3d][R0][ -0.097280 2.904744 0.801624 ]>
-                <[float64][Kfx][670000.0]>
-                <[float64][Kfy][670000.0]>
-                <[float64][Kfz][670000.0]>
-                <[float64][Dfx][3400]>
-                <[float64][Dfy][3400]>
-                <[float64][Dfz][3400]>
-                <[float64][Ktx][470000]>
-                <[float64][Kty][51000]>
-                <[float64][Ktz][51000]>
-                <[float64][Dtx][1700]>
-                <[float64][Dty][1700]>
-                <[float64][Dtz][1700]>
+            <[multibody_joint][JointFuselageLeftWing2][]
                 <[string8][Body0][Fuselage]>
                 <[string8][Body1][LeftWing2]>
-                <[float64][ForceMax][170000.0]>
-                <[float64][TorqueMax][170000.0]>
+                <[tmvector3d][X0][1.0 0.0 0.0]>
+                <[tmvector3d][R0][ -0.097280 2.904744 0.801624 ]>
+                <[float64][Kp][1000000.0]>
+                <[float64][Kd][10000.0]>
+                <[uint32][Type][0]>
             >
             <[rigidbody][RightWing2][]
                 <[float64][Mass][17.0]>
@@ -139,24 +129,14 @@
                 <[tmvector3d][R0][-0.498577 -4.440412 0.882105]>
                 <[tmmatrix3d][B0][0.999048 -0.043619 0.0 0.043619 0.997679 -0.052336 0.0 0.052336 0.998630]>
             >
-            <[jointlinear][JointFuselageRightWing2][]
-                <[tmvector3d][R0][ -0.097280 -2.904744 0.801624 ]>
-                <[float64][Kfx][670000.0]>
-                <[float64][Kfy][670000.0]>
-                <[float64][Kfz][670000.0]>
-                <[float64][Dfx][3400]>
-                <[float64][Dfy][3400]>
-                <[float64][Dfz][3400]>
-                <[float64][Ktx][470000]>
-                <[float64][Kty][51000]>
-                <[float64][Ktz][51000]>
-                <[float64][Dtx][1700]>
-                <[float64][Dty][1700]>
-                <[float64][Dtz][1700]>
+            <[multibody_joint][JointFuselageRightWing2][]
                 <[string8][Body0][Fuselage]>
                 <[string8][Body1][RightWing2]>
-                <[float64][ForceMax][170000.0]>
-                <[float64][TorqueMax][170000.0]>
+                <[tmvector3d][X0][1.0 0.0 0.0]>
+                <[tmvector3d][R0][ -0.097280 -2.904744 0.801624 ]>
+                <[float64][Kp][1000000.0]>
+                <[float64][Kd][10000.0]>
+                <[uint32][Type][0]>
             >
             <[collisionhull][CollisionFuselage][]
                 <[string8][Body][Fuselage]>
@@ -2703,7 +2683,7 @@
 
 			//Left Gear
             <[bendingbodygraphics][LeftStrut][]
-                <[string8][GeometryList][ StrutL8 FairingL8 ]>
+                <[string8][GeometryList][ StrutL8 ]>
                 <[uint32][PositionID][LeftGear.R]>
                 <[uint32][OrientationID][LeftGear.Q]>
                 <[uint32][PositionID1][Fuselage.R]>
@@ -2726,7 +2706,7 @@
 
 			//Right Gear
             <[bendingbodygraphics][RightStrut][]
-                <[string8][GeometryList][ StrutR8 FairingR8 ]>
+                <[string8][GeometryList][ StrutR8 ]>
                 <[uint32][PositionID][RightGear.R]>
                 <[uint32][OrientationID][RightGear.Q]>
                 <[uint32][PositionID1][Fuselage.R]>

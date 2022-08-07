@@ -1,6 +1,6 @@
 <[file][][]
     <[hints][][]
-        // Piper PA-11 Cub Special
+        // Cessna 170B
         <[float64][MaximumTakeOffMass][553.0]>
         <[float64][WingSpan][10.7]>
         <[float64][WingArea][12.0]>
@@ -8,6 +8,31 @@
         <[float64][ApproachSpeed][28.3]>
         <[float64][PatternSpeed][46.3]>
         <[float64][InitialClimbSpeed][28.3]>
+        <[copilot_flap_info_list][FlapInfo][]
+           <[copilot_flap_info][FlapUp][]
+              <[float64][FlapPosition][0.0]>
+              <[float64][MinimumSpeed][29.0]>
+              <[float64][OptimumSpeed][51.73]>
+              <[float64][MaximumSpeed][70.0]>
+              <[bool][TakeOff][true]>
+              <[bool][Landing][true]>
+           >
+           <[copilot_flap_info][FlapApproach][]
+              <[float64][FlapPosition][0.5]>
+              <[float64][MinimumSpeed][29.0]>
+              <[float64][OptimumSpeed][41.4]>
+              <[float64][MaximumSpeed][52.7]>
+              <[bool][TakeOff][true]>
+              <[bool][Landing][true]>
+           >
+           <[copilot_flap_info][FlapFull][]
+              <[float64][FlapPosition][1.0]>
+              <[float64][MinimumSpeed][29.0]>
+              <[float64][OptimumSpeed][36.29]>
+              <[float64][MaximumSpeed][42.7]>
+              <[bool][Landing][true]>
+           >
+        >		
         <[int][EngineCount][1]>
         <[bool][Piston][true]>
         <[bool][GeneralAviation][true]>
