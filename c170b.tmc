@@ -3,7 +3,7 @@
         <[int][Version][220]>
         <[vec32array][ContactSpheres][ (0.504 1.155 -1.368 0.244) (0.504 -1.155 -1.368 0.244) (-5.824 0.0 -0.439 0.128) ]>
         <[string8][ICAO][C170]>
-        <[string8][DisplayName][Cessna 170B]>
+        <[string8][DisplayName][Cessna 170]>
         <[string8][DisplayNameFull][Cessna 170B]>
         <[localized_text_list][Descriptions][]
             <[localized_text][][]
