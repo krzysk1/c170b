@@ -3388,8 +3388,7 @@
                 <[uint32][OrientationID][Fuselage.Q]>
                 <[uint32][InputID][PitchAngle.Output]>
                 <[tmvector3d][Axis][0.12187 0.0 0.992546]>
-                <[float64][Scaling][0.03]>
-//                 <[float64][Pos1][-0.03]>
+                <[float64][Scaling][-0.03]>
                 <[string8][Graphics][ArtificialHorizonBack]>
             >
             <[rigidbodygraphics][ArtificialHorizon_Gauge][]
