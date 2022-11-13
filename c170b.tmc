@@ -13,15 +13,15 @@
             <[localized_text][][]
                 <[string8][Language][de]>
                 <[string8][Text][Ab 1948 erweiterte Cessna die bestehende Modellreihe um die Cessna 170. Mit vier Sitzplätzen war es eine vergrößerte Version des Leichtflugzeug Cessna 140. Wie diese war die Cessna 170 ein Schulterdecker mit abgestrebten Tragflächen und starrem Spornradfahrwerk. Von der Modellreihe 170, 170A, 170B und 170C wurden fast 5200 Exemplare zwischen 1948 und 1956 gebaut. Für Aerofly FS4 von Krzysztof Kaniewski. 3d-Modell erstellt von Alcalá Simulación. ]>
-			>			
+			>
         >
 		<[float64][WingSpan][10.97]>
 		<[float64][MaximumAirspeed][62.0]>
-		<[float64][MaximumSpeed][62.0]>		
+		<[float64][MaximumSpeed][62.0]>
 		<[float64][MinimumAirspeed][21.5]>
         <[float64][ApproachAirspeed][25.3]>
         <[float64][CruiseAirspeed][52.5]>
-        <[float64][CruiseSpeed][70.0]>		
+        <[float64][CruiseSpeed][70.0]>
 		<[tmvector2d][NormalAirspeedRange][ 21.5 50.0 ]>
 		<[tmvector2d][CautionAirspeedRange][ 50.0 70.0 ]>
 		<[tmvector2d][FlapAirspeedRange][ 20.0 53.5 ]>
@@ -34,7 +34,7 @@
         <[uint][EngineCount][1]>
         <[uint][Year][1948]>
         <[tmvector2d][FlapSettings][ (0.0 0.0) (0.25 0.174533) (0.5 0.349066) (0.75 0.523599) (1.0 0.698132) ]>
-        <[string8][FlapQualifier][]>		
+        <[string8][FlapQualifier][]>
         <[string8][Tags][ airplane piston general_aviation gear tailgear flaps ]>
 		<[string8][Pilot][]>
     >
