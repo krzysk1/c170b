@@ -3029,7 +3029,7 @@
                 <[uint32][OrientationID][Fuselage.Q]>
                 <[uint32][InputID][ServoRudder.Output]>
                 <[tmvector3d][Axis][-0.1 0.0 0.0]>
-                <[float64][Scaling][-1.0]>
+                <[float64][Scaling][1.0]>
             >
             <[movinggraphics][Pedal4_1_12][]
                 <[string8][GeometryList][ Pedal4112 ]>
@@ -3037,7 +3037,7 @@
                 <[uint32][OrientationID][Fuselage.Q]>
                 <[uint32][InputID][ServoRudder.Output]>
                 <[tmvector3d][Axis][0.1 0.0 0.0]>
-                <[float64][Scaling][-1.0]>
+                <[float64][Scaling][1.0]>
             >
 
 		// obj3
@@ -3108,7 +3108,7 @@
             <[graphics_flasher][BeaconPilot][]
                 <[string8][Function][Triangle]>
                 <[string8][InputTime][UniversalTime.Output]>
-                <[float64][Period][5.49]>
+                <[float64][Period][15.49]>
             >
             <[graphics_linear_interpolation][obj5aInput_0][]
                 <[uint32][Input][BeaconPilot.Output]>
@@ -3161,7 +3161,7 @@
             >
             <[graphics_flasher][BeaconCoPilot][]
                 <[string8][Function][Triangle]>
-                <[float64][Period][7.49]>
+                <[float64][Period][17.49]>
             >
             <[graphics_linear_interpolation][obj5bInput_0][]
                 <[uint32][Input][BeaconCoPilot.Output]>
@@ -3445,6 +3445,46 @@
             >
 
             // Pilot animation
+
+            <[graphics_flasher][BeaconHeadRotation][]
+                <[string8][Function][Triangle]>
+                <[string8][InputTime][UniversalTime.Output]>
+                <[float64][Period][28.49]>
+                <[float64][Minimum][0.0]>
+            >
+            <[graphics_linear_interpolation][BeaconHeadTimeBaseInput][]
+                <[uint32][Input][BeaconHeadRotation.Output]>
+                <[tmvector2d][Map][(0 0) (1 360)]>
+            >
+            <[graphics_linear_interpolation][BeaconHeadRollMapping][]
+                <[string8][Input][BeaconHeadTimeBaseInput.Output]>
+                <[tmvector2d][Map][(0.0 0.0) (140.0 0.040666) (280.0 0.043633) (360.0 0.052011) ]>
+            >
+            <[graphics_rotation][BeaconHeadRollMappingRotation][]
+                <[string8][Input][BeaconHeadRollMapping.Output]>
+                <[tmvector3d][Axis][ -1.0 0.0 0.0 ]>
+                <[tmvector3d][Pivot][-0.2484 0.2588 0.4644]>
+            >
+            <[graphics_linear_interpolation][BeaconHeadYawMapping][]
+                <[string8][Input][BeaconHeadTimeBaseInput.Output]>
+                <[tmvector2d][Map][(0.0 0.0) (140.0 -0.434587) (280.0 0.174533) (360.0 -0.002443) ]>
+            >
+            <[graphics_rotation][BeaconHeadYawRotation][]
+                <[string8][Input][BeaconHeadYawMapping.Output]>
+                <[tmvector3d][Axis][ 0.0 0.0 1.0 ]>
+                <[tmvector3d][Pivot][-0.2484 0.2588 0.4644]>
+                <[string8][InputTransform][BeaconHeadRollMappingRotation.Output]>
+            >
+            <[graphics_linear_interpolation][BeaconHeadPitchMapping][]
+                <[string8][Input][BeaconHeadTimeBaseInput.Output]>
+                <[tmvector2d][Map][(0.0 0.0) (140.0 -0.096168) (280.0 -0.037176) (360.0 0.006807) ]>
+            >
+            <[graphics_rotation][BeaconHeadTransform][]
+                <[string8][Input][BeaconHeadPitchMapping.Output]>
+                <[tmvector3d][Axis][ 0.0 -1.0 0.0 ]>
+                <[tmvector3d][Pivot][-0.2484 0.2588 0.4644]>
+                <[string8][InputTransform][BeaconHeadYawRotation.Output]>
+            >
 			
             <[graphics_input][PilotHeadInput][]
                 <[uint32][InputID][ServoRudder.Output]>
@@ -3457,7 +3497,8 @@
             <[graphics_rotation][PilotHeadTransform][]
                 <[string8][Input][PilotHeadMapping.Output]>
                 <[tmvector3d][Axis][ 0.0 0.0 1.0 ]>
-                <[tmvector3d][Pivot][0.07 0.1276 0.2468]>
+                <[tmvector3d][Pivot][-0.2484 0.2588 0.4644]>
+                <[string8][InputTransform][BeaconHeadTransform.Output]>				
             >
 			
             <[graphics_translation][StickBaseTransform][]
@@ -3509,11 +3550,11 @@
                 <[tmvector3d][Axis][ 1.0 0.0 0.0 ]>
             >
 			
-            // Pilot
+            // human graphics
             <[graphics_human][Pilot][]
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
-                <[string8][GeometryList][ PilotBody PilotHead ]>
+            //    <[string8][GeometryList][ PilotBody PilotHead ]>
                 <[uint32][ShowInside][ CameraCopilot CameraRearSeat ]>
                 <[bone_array][Bones][]
                  <[bone][element][0]
@@ -4547,6 +4588,7 @@
                      <[tmvector3d][X0][ 7.6704 -0.0826 19.2979 ]>
                      <[tmvector3d][Y0][ 19.2980 -0.0167 -7.6705 ]>
                      <[tmvector3d][Z0][ 0.0426 19.2200 0.0654 ]>
+                     <[string8][InputTransform][PilotHeadTransform.Output]>			 
                  >
                  <[bone][element][7]
                      <[string8][Name][Bip01 HeadNub]>
