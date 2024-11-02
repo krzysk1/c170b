@@ -1,18 +1,22 @@
 ﻿<[file][][]
-    <[object][][]
-        <[int][Version][220]>
-        <[vec32array][ContactSpheres][ (0.504 1.155 -1.368 0.244) (0.504 -1.155 -1.368 0.244) (-5.824 0.0 -0.439 0.128) ]>
-        <[string8][ICAO][C170]>
+    <[modelinformation][][]
+        <[int32][Version][220]>
+        <[list_vector4_float64][ContactSpheres][ (0.504 1.155 -1.368 0.244) (0.504 -1.155 -1.368 0.244) (-5.824 0.0 -0.439 0.128) ]>
+        <[stringt8c][ICAO][C170]>
         <[string8][DisplayName][Cessna 170]>
         <[string8][DisplayNameFull][Cessna 170B]>
-        <[localized_text_list][Descriptions][]
-            <[localized_text][][]
+        <[list_localized_text][Descriptions][]
+            <[localized_text][element][0]
                 <[string8][Language][en]>
                 <[string8][Text][The Cessna 170 is a light, single-engined, general aviation aircraft produced by the Cessna Aircraft Company between 1948 and 1956. Over 5,000 Cessna 170s were built and over 2,000 are still in service today. For Aerofly FS4 made by Krzysztof Kaniewski. Original 3D model by Alcalá Simulación.]>
 			>
-            <[localized_text][][]
+            <[localized_text][element][1]
                 <[string8][Language][de]>
                 <[string8][Text][Ab 1948 erweiterte Cessna die bestehende Modellreihe um die Cessna 170. Mit vier Sitzplätzen war es eine vergrößerte Version des Leichtflugzeug Cessna 140. Wie diese war die Cessna 170 ein Schulterdecker mit abgestrebten Tragflächen und starrem Spornradfahrwerk. Von der Modellreihe 170, 170A, 170B und 170C wurden fast 5200 Exemplare zwischen 1948 und 1956 gebaut. Für Aerofly FS4 von Krzysztof Kaniewski. 3d-Modell erstellt von Alcalá Simulación.]>
+			>
+            <[localized_text][element][2]
+                <[string8][Language][pl]>
+                <[string8][Text][Cessna 170 to lekki, jednosilnikowy samolot lotnictwa ogólnego produkowany przez Cessna Aircraft Company w latach 1948-1956. Zbudowano ponad 5000 egzemplarzy Cessny 170, a ponad 2000 jest nadal w użyciu. Dla Aerofly FS4 wykonany przez Krzysztofa Kaniewskiego. Oryginalny model 3D autorstwa Alcalá Simulación.]>
 			>
         >
 		<[float64][WingSpan][10.97]>

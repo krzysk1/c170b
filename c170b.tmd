@@ -811,7 +811,7 @@
                 <[float64][InputTemperature] [EngineHousing.Output]>
                 <[float64][AddHeat]          [EngineHousing.AddHeat]>
                 <[float64][RotationInertia][1.1776]>
-                <[float64][ThrottleIdle][0.1]>
+                <[float64][ThrottleIdle][0.12]>
                 <[float64][Friction][50.0]>
                 <[float64][RatedRotationSpeed][270.0]>
                 <[float64][RatedPower][108126]>
@@ -2660,7 +2660,7 @@
                 <[string8][Graphics1][_Cube_011_8]>
                 <[tmvector3d][Joint0][-5.3165 -0.0916 -0.0136]>
                 <[tmvector3d][Joint1][-5.7126 -0.0681 -0.2725]>
-                <[uint32][AttachTo][2]>
+                <[uint32][AttachTo][1]>
             >
             <[linkagegraphics][LinkRudderLeft][]
                 <[string8][GeometryList][ MandoTimon118 MandoTimon78 ]>
@@ -2668,7 +2668,7 @@
                 <[string8][Graphics1][_Cube_011_8]>
                 <[tmvector3d][Joint0][-5.3566 0.0641 -0.0359]>
                 <[tmvector3d][Joint1][-5.715 0.0712 -0.2746]>
-                <[uint32][AttachTo][2]>
+                <[uint32][AttachTo][1]>
             >
 
 			//Left Gear
@@ -3444,7 +3444,7 @@
                 <[uint32][OrientationID][MagneticCompassCard.Q]>
             >
 
-            // Pilot animation
+            // human animation
 
             <[graphics_flasher][BeaconHeadRotation][]
                 <[string8][Function][Triangle]>
