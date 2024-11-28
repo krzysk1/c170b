@@ -3401,11 +3401,11 @@
 			// Variometer gauge
             <[graphics_input][VerticalSpeedInput][]
                 <[uint32][InputID][VerticalSpeedIndicatorNeedle.Output]>
-                <[float64][Scaling][196.85]>
+                <[float64][Scaling][1.9685]>
             >
             <[graphics_linear_interpolation][VerticalSpeedMapping][]
                 <[string8][Input][VerticalSpeedInput.Output]>
-                <[tmvector2d][Map][(-2000.0 -4.5902) (0 -1.5708) (2000.0 1.48353)]>
+                <[tmvector2d][Map][(-20.0 -4.5902) (0 -1.5708) (20.0 1.48353)]>
             >
             <[hingedbodygraphics][Variometer_Needle][]
                 <[string8][GeometryList][ VviNeedle ]>
