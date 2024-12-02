@@ -28,7 +28,7 @@
             <[camera_head][CameraPilot][]
                 <[string8][Tags][cockpit pilot left]>
                 <[string8][Body][Fuselage]>
-                <[tmvector3d][R0][ -0.2111 0.2520 0.5391 ]>
+                <[tmvector3d][R0][ -0.15 0.25 0.53 ]>
                 <[tmvector3d][Direction][ 0.98 0.0 -0.2 ]>
                 <[float64][Kf][40.0]>
                 <[float64][Df][1.00]>
@@ -39,7 +39,7 @@
             <[camera_head][CameraCopilot][]
                 <[string8][Tags][cockpit pilot right]>
                 <[string8][Body][Fuselage]>
-                <[tmvector3d][R0][ -0.2671 -0.2658 0.5550 ]>
+                <[tmvector3d][R0][ -0.15 -0.26 0.55 ]>
                 <[tmvector3d][Direction][ 0.98 0.0 -0.2 ]>
                 <[float64][Kf][40.0]>
                 <[float64][Df][1.00]>
@@ -59,24 +59,28 @@
                 <[string8][Body][Fuselage]>
                 <[tmvector3d][R0][ 3.2982 5.9761 -1.0994 ]>
                 <[tmvector3d][Direction][ -0.6068 -0.7817 0.1438 ]>
+                <[bool][InCockpit][false]>
             >
             <[camera][CameraRightWing][]
                 <[string8][Tags][right wing]>
                 <[string8][Body][Fuselage]>
                 <[tmvector3d][R0][ -4.5194 -5.9761 1.3039 ]>
                 <[tmvector3d][Direction][ 0.4611 0.8670 -0.1892 ]>
+                <[bool][InCockpit][false]>
             >
             <[camera][CameraNose][]
                 <[string8][Tags][nose]>
                 <[string8][Body][Fuselage]>
                 <[tmvector3d][R0][ 5.2982 1.6491 1.6491 ]>
                 <[tmvector3d][Direction][ -0.9435 -0.2343 -0.2343 ]>
+                <[bool][InCockpit][false]>
             >
             <[camera][CameraTail][]
                 <[string8][Tags][tail]>
                 <[string8][Body][Fuselage]>
                 <[tmvector3d][R0][ -5.5194 0.0 2.1731 ]>
                 <[tmvector3d][Direction][ 0.8872 0.0 -0.4614 ]>
+                <[bool][InCockpit][false]>
             >
 
             // Rigidbodies
