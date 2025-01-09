@@ -19,24 +19,24 @@
                 <[string8][Text][Cessna 170 to lekki, jednosilnikowy samolot lotnictwa ogólnego produkowany przez Cessna Aircraft Company w latach 1948-1956. Zbudowano ponad 5000 egzemplarzy Cessny 170, a ponad 2000 jest nadal w użyciu. Dla Aerofly FS4 wykonany przez Krzysztofa Kaniewskiego. Oryginalny model 3D autorstwa Alcalá Simulación.]>
 			>
         >
-		<[float64][WingSpan][10.97]>
-		<[float64][MaximumAirspeed][62.0]>
-		<[float64][MaximumSpeed][62.0]>
-		<[float64][MinimumAirspeed][21.5]>
-        <[float64][ApproachAirspeed][25.3]>
-        <[float64][CruiseAirspeed][52.5]>
-        <[float64][CruiseSpeed][70.0]>
-		<[vector2_float64][NormalAirspeedRange][ 21.5 50.0 ]>
-		<[vector2_float64][CautionAirspeedRange][ 50.0 70.0 ]>
-		<[vector2_float64][FlapAirspeedRange][ 20.0 53.5 ]>
-        <[float64][MaximumAltitude][4724.0]>
-        <[float64][CruiseAltitude][1826.0]>
         <[float64][MaximumTakeoffMass][998.0]>
-        <[float64][EnginePower][108000.0]>
-        <[float64][MaximumRange][950000.0]>
-        <[uint32][UnitsBuilt][5174]>
-        <[uint32][EngineCount][1]>
-        <[uint32][Year][1948]>
+		<[float64][WingSpan]          [10.97]>
+        <[uint32] [Year]              [1948]>
+        <[uint32] [UnitsBuilt]        [5174]>
+        <[uint32] [EngineCount]       [1]>
+        <[float64][EnginePower]       [108000.0]>
+		<[float64][MaximumAirspeed]   [62.0]>
+		<[float64][MaximumSpeed]      [62.0]>
+		<[float64][MinimumAirspeed]   [21.5]>
+        <[float64][ApproachAirspeed]  [25.3]>
+        <[float64][CruiseAirspeed]    [52.5]>
+        <[float64][CruiseSpeed]       [70.0]>
+        <[float64][MaximumAltitude]   [4724.0]>
+        <[float64][CruiseAltitude]    [1826.0]>
+        <[float64][MaximumRange]      [950000.0]>
+		<[vector2_float64][FlapAirspeedRange]   [ 20.0 53.5 ]>
+		<[vector2_float64][NormalAirspeedRange] [ 21.5 50.0 ]>
+		<[vector2_float64][CautionAirspeedRange][ 50.0 70.0 ]>
         <[list_vector2_float64][FlapSettings][ (0.0 0.0) (0.25 0.174533) (0.5 0.349066) (0.75 0.523599) (1.0 0.698132) ]>
         <[string8][FlapQualifier][]>
         <[string8][Tags][ airplane piston general_aviation gear tailgear flaps ]>
