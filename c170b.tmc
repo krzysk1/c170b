@@ -15,6 +15,18 @@
                 <[string8][Text][Ab 1948 erweiterte Cessna die bestehende Modellreihe um die Cessna 170. Mit vier Sitzplätzen war es eine vergrößerte Version des Leichtflugzeug Cessna 140. Wie diese war die Cessna 170 ein Schulterdecker mit abgestrebten Tragflächen und starrem Spornradfahrwerk. Von der Modellreihe 170, 170A, 170B und 170C wurden fast 5200 Exemplare zwischen 1948 und 1956 gebaut. Für Aerofly FS4 von Krzysztof Kaniewski. 3d-Modell erstellt von Alcalá Simulación.]>
 			>
             <[localized_text][element][2]
+                <[string8u][Language][fr]>
+                <[string8][Text][Le Cessna 170 est un avion léger monomoteur destiné à l'aviation générale, produit par la Cessna Aircraft Company entre 1948 et 1956. Plus de 5 000 Cessna 170 ont été construits et plus de 2 000 sont encore en service aujourd'hui. Pour Aerofly FS4, réalisé par Krzysztof Kaniewski. Modèle 3D original par Alcalá Simulación.]>
+			>
+            <[localized_text][element][3]
+                <[string8u][Language][es]>
+                <[string8][Text][El Cessna 170 es un avión ligero, monomotor, de aviación general, fabricado por la Cessna Aircraft Company entre 1948 y 1956. Se construyeron más de 5000 Cessna 170 y más de 2000 siguen en servicio hoy en día. Para Aerofly FS4, creado por Krzysztof Kaniewski. Modelo 3D original de Alcalá Simulación.]>
+			>
+            <[localized_text][element][4]
+                <[string8u][Language][it]>
+                <[string8][Text][Il Cessna 170 è un velivolo leggero monomotore per l'aviazione generale prodotto dalla Cessna Aircraft Company tra il 1948 e il 1956. Sono stati costruiti oltre 5.000 Cessna 170 e oltre 2.000 sono ancora in servizio oggi. Per Aerofly FS4 realizzato da Krzysztof Kaniewski. Modello 3D originale di Alcalá Simulación.]>
+			>
+            <[localized_text][element][5]
                 <[string8u][Language][pl]>
                 <[string8][Text][Cessna 170 to lekki, jednosilnikowy samolot lotnictwa ogólnego produkowany przez Cessna Aircraft Company w latach 1948-1956. Zbudowano ponad 5000 egzemplarzy Cessny 170, a ponad 2000 jest nadal w użyciu. Dla Aerofly FS4 wykonany przez Krzysztofa Kaniewskiego. Oryginalny model 3D autorstwa Alcalá Simulación.]>
 			>
