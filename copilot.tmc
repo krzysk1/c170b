@@ -7,39 +7,53 @@
         <[float64][HeightOffset][-1.3]>
         <[float64][ApproachSpeed][28.3]>
         <[float64][PatternSpeed][46.3]>
-        <[float64][InitialClimbSpeed][28.3]>
+        <[float64][InitialClimbSpeed][34.04]>
         <[copilot_flap_info_list][FlapInfo][]
-           <[copilot_flap_info][FlapUp][]
+           <[copilot_flap_info][Flap0][]
               <[float64][FlapPosition][0.0]>
-              <[float64][MinimumSpeed][29.0]>
-              <[float64][OptimumSpeed][51.73]>
+              <[float64][MinimumSpeed][24.2]>
+              <[float64][OptimumSpeed][43.7]>
               <[float64][MaximumSpeed][70.0]>
               <[bool][TakeOff][true]>
               <[bool][Landing][true]>
            >
-           <[copilot_flap_info][FlapApproach][]
-              <[float64][FlapPosition][0.5]>
-              <[float64][MinimumSpeed][29.0]>
-              <[float64][OptimumSpeed][41.4]>
-              <[float64][MaximumSpeed][52.7]>
+           <[copilot_flap_info][Flap10][]
+              <[float64][FlapPosition][0.1745]>
+              <[float64][MinimumSpeed][23.0]>
+              <[float64][OptimumSpeed][41.15]>
+              <[float64][MaximumSpeed][56.5]>
               <[bool][TakeOff][true]>
               <[bool][Landing][true]>
            >
-           <[copilot_flap_info][FlapFull][]
-              <[float64][FlapPosition][1.0]>
-              <[float64][MinimumSpeed][29.0]>
-              <[float64][OptimumSpeed][36.29]>
-              <[float64][MaximumSpeed][42.7]>
+           <[copilot_flap_info][Flap20][]
+              <[float64][FlapPosition][0.349]>
+              <[float64][MinimumSpeed][22.0]>
+              <[float64][OptimumSpeed][33.43]>
+              <[float64][MaximumSpeed][43.7]>
               <[bool][Landing][true]>
            >
+           <[copilot_flap_info][Flap30][]
+              <[float64][FlapPosition][0.52356]>
+              <[float64][MinimumSpeed][20.6]>
+              <[float64][OptimumSpeed][30.8]>
+              <[float64][MaximumSpeed][43.7]>
+              <[bool][Landing][true]>
+           >
+           <[copilot_flap_info][Flap40][]
+              <[float64][FlapPosition][0.698132]>
+              <[float64][MinimumSpeed][20.4]>
+              <[float64][OptimumSpeed][30.1]>
+              <[float64][MaximumSpeed][42.7]>
+              <[bool][Landing][true]>
+           >		   
         >
         <[string8][AutoPilotType][]>
         <[int][EngineCount][1]>
         <[bool][Piston][true]>
-        <[bool][GeneralAviation][true]>			
+        <[bool][GeneralAviation][true]>
         <[bool][ParkingBrake][true]>
         <[bool][RudderTrimRequired][true]>
-        <[bool][TailDragger][true]>		
+        <[bool][TailDragger][true]>
         <[float64][PitchTrimTakeOff][-0.18]>
         <[float64][ElevatorGain][1.0]>
         <[float64][AileronGain][1.0]>
