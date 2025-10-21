@@ -1486,6 +1486,24 @@
             <[output_free][CabinAirLeverOutput][]
                 <[string8][Input][CabinAirLever.Output]>
             >
+            <[input_lever][AirVentLeft][]
+                <[string8][Message][Controls.AirVentLeft]>
+                <[tmvector2d][Range][ -1.0 1.0 ]>
+                <[uint][Positions][21]>
+                <[float64][Value][0.0]>
+            >
+            <[output_free][AirVentLeftOutput][]
+                <[string8][Input][AirVentLeft.Output]>
+            >
+            <[input_lever][AirVentRight][]
+                <[string8][Message][Controls.AirVentRight]>
+                <[tmvector2d][Range][ -1.0 1.0 ]>
+                <[uint][Positions][21]>
+                <[float64][Value][0.0]>
+            >
+            <[output_free][AirVentRightOutput][]
+                <[string8][Input][AirVentRight.Output]>
+            >
 
             // air conditioning end
 
@@ -2296,10 +2314,9 @@
                 <[tmvector3d][Pivot][0.2859 -0.0493 -0.4374]>
 				<[float64][Scaling][0.698132]>
             >
-			// Air Ventilation Right
+			// air ventilation right
             <[graphics_input][CockpitInput_17][]
-                <[uint32][InputID][SunBlind.Output]>
-                <[float64][Scaling][1.0]>
+                <[uint32][InputID][AirVentRight.Output]>
             >
             <[graphics_linear_interpolation][CockpitMapping_171][]
                 <[string8][Input][CockpitInput_17.Output]>
@@ -2310,12 +2327,8 @@
                 <[tmvector3d][Axis][0.0 0.0768 -0.0037]>
                 <[string8][InputTransform][CockpitRotate_174.Output]>
             >
-            <[graphics_input][CockpitInput_18][]
-                <[uint32][InputID][SunBlind.Output]>
-                <[float64][Scaling][1.0]>
-            >
             <[graphics_linear_interpolation][CockpitMapping_174][]
-                <[string8][Input][CockpitInput_18.Output]>
+                <[string8][Input][CockpitInput_17.Output]>
                 <[tmvector2d][Map][(-1.0 0.141023) (1 -2.313260)]>
             >
             <[graphics_rotation][CockpitRotate_174][]
@@ -2329,11 +2342,9 @@
                 <[uint32][OrientationID][Fuselage.Q]>
                 <[string8][InputTransform][CockpitMoving_171.Output]>
             >
-
-			// Air Ventilation Left
+			// air ventilation left
             <[graphics_input][CockpitInput_19][]
-                <[uint32][InputID][SunBlind.Output]>
-                <[float64][Scaling][1.0]>
+                <[uint32][InputID][AirVentLeft.Output]>
             >
             <[graphics_linear_interpolation][CockpitMapping_179][]
                 <[string8][Input][CockpitInput_19.Output]>
@@ -2344,12 +2355,8 @@
                 <[tmvector3d][Axis][0.0 -0.0776 -0.0037]>
                 <[string8][InputTransform][CockpitRotate_182.Output]>
             >
-            <[graphics_input][CockpitInput_20][]
-                <[uint32][InputID][SunBlind.Output]>
-                <[float64][Scaling][1.0]>
-            >
             <[graphics_linear_interpolation][CockpitMapping_182][]
-                <[string8][Input][CockpitInput_20.Output]>
+                <[string8][Input][CockpitInput_19.Output]>
                 <[tmvector2d][Map][(-1.0 0.048695) (1 2.835288)]>
             >
             <[graphics_rotation][CockpitRotate_182][]
@@ -2876,7 +2883,6 @@
                 <[tmvector3d][Pivot][-0.2747 0.5135 0.1938]>
                 <[string8][Graphics][LeftDoor]>
             >
-
 			// Propeller
             <[propellergraphics][Propeller][]
                 <[string8][GeometryList][ Propellerdisk ]>
