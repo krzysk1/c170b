@@ -5869,11 +5869,11 @@
             >
             <[soundmapping][FlightVolume][]
                 <[string8][Input][Airspeed.Output]>
-                <[tmvector2d][Map][ (0.0 0.0) (10.0 0.0) (15.0 0.5) (100.0 1.5) (200.0 2.0) ]>
+                <[tmvector2d][Map][ (0.0 0.0) (10.0 0.0) (15.0 0.1) (100.0 0.2) (200.0 0.3) ]>
             >
             <[soundmapping][FlightPitch][]
                 <[string8][Input][Airspeed.Output]>
-                <[tmvector2d][Map][ (0.0 0.80) ( 120.0 1.0 ) (200.0 5.2) ]>
+                <[tmvector2d][Map][ (0.0 0.80) ( 60.0 1.0 ) (200.0 3.2) ]>
             >
             <[soundloop][FlightVolumeLoop][]
                 <[string8][InputVolume][FlightVolume.Output]>
@@ -5953,7 +5953,7 @@
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][VelocityID][Fuselage.V]>
                 <[string8][SoundFile][prop_wind.wav]>
-                <[bool][External][false]>
+                <[bool][Internal][false]>
                 <[tmvector3d][R0][ 2.1 0.0 0.0 ]>
             >
 
@@ -6004,7 +6004,7 @@
                 <[string8][InputPitch][RPMPitchIdle.Output]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][VelocityID][Fuselage.V]>
-                <[string8][SoundFile][engine_cranking.wav]> //engine_idle.wav
+                <[string8][SoundFile][engine_running.wav]>
                 <[tmvector3d][R0][ 2.1 0.0 0.0 ]>
             >
             <[soundloop][RPMRunLoop][]
