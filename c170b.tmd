@@ -1528,8 +1528,6 @@
                 <[float64][Speed][2.0]>
                 <[float64][P0][0.0]>
                 <[float64][P1][1.0]>
-                <[float64][P2][0.0]>
-                <[float64][P3][0.0]>
                 <[float64][Position][0.0]>
             >
             <[output_free][ParkingBrakeOutput][]
@@ -1850,12 +1848,6 @@
             >
             <[output_uint][COM1AudioChannel][]
                 <[string8][Input][COM1Audio.OutputChannel]>
-            >
-            <[input_audio_channel][COM1Squelch][]
-                <[string8][Input][1.0]>
-            >
-            <[output_free][COM1SquelchOutput][]
-                <[string8][Input][COM1Squelch.Output]>
             >
 
             // transponder start - SQUAWK

@@ -2,28 +2,54 @@
     <[modelmanager][][]
         <[pointer_list_tmuniverse][DynamicObjects][]
 
+            <[input_discrete][Magnetos][]
+                <[float64][Value][0.0]>
+            >
+            <[input_lever][Mixture][]
+                <[float64][Value][0.0]>
+            >
+            <[input_switch][MasterBatterySwitch][]
+                <[float64][Value][0.0]>
+            >
+            <[input_switch][ParkingBrakeInput][]
+                <[float64][Value][1.0]>
+            >
+            <[input_switch][SwitchAvionicsBus1][]
+                <[float64][Value][0.0]>
+            >
+            <[multibody_joint][PropellerJoint][]
+                <[float64][InitialVelocity][0.0]>
+            >
+
+            // flaps up
+            <[input_lever][FlapsInput][]
+                <[float64][Value][0]>
+            >
+			
             // trim
-            <[input_default][PitchTrim][95]
+            <[input_default][ElevatorTrimInput][]
                 <[float64][Value][0.0]>
             >
 
             // lights
-            <[input_switch][StrobeLightSwitch][0]
+            <[input_switch][StrobeLightSwitch][]
                 <[float64][Value][0.0]>
             >
-            <[input_switch][BeaconLightSwitch][0]
+            <[input_switch][BeaconLightSwitch][]
                 <[float64][Value][0.0]>
             >
-            <[input_switch][NavigationLightSwitch][0]
+            <[input_switch][NavigationLightSwitch][]
                 <[float64][Value][0.0]>
             >
-            <[input_switch][LandingLightSwitch][0]
+            <[input_switch][LandingLightSwitch][]
                 <[float64][Value][0.0]>
             >
-            <[input_switch][TaxiLightSwitch][0]
+            <[input_switch][PanelLightSwitch][]
+                <[float64][Value][0.0]>
+            >
+            <[input_switch][InstrumentsLightSwitch][]
                 <[float64][Value][0.0]>
             >
         >
     >
 >
-

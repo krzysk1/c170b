@@ -3,40 +3,37 @@
         <[pointer_list_tmuniverse][DynamicObjects][]
 
             // engine
-            <[input_lever][ThrottleInput][62]
+            <[input_lever][ThrottleInput][]
                 <[float64][Value][0.211813304123683]>
             >
-            <[servoclassic][ThrottleLever][63]
+            <[servoclassic][ServoThrottle][]
                 <[float64][Position][0.211813304123683]>
             >
-            <[multibody_joint][PropellerJoint][43]
-                <[float64][Velocity][164.0]>
+            <[multibody_joint][PropellerJoint][]
+                <[float64][InitialVelocity][164.0]>
             >
 			
-            // flaps up
-            <[input_lever][FlapsInput][0]
+            // flaps full
+            <[input_lever][FlapsInput][]
                 <[float64][Value][1]>
             >
 			
             // trim
-            <[input_default][PitchTrim][95]
+            <[input_default][ElevatorTrimInput][]
                 <[float64][Value][-0.5]>
             >
-			
+
             // lights
-            <[input_switch][StrobeLightSwitch][0]
+            <[input_switch][StrobeLightSwitch][]
                 <[float64][Value][1.0]>
             >
-            <[input_switch][BeaconLightSwitch][0]
+            <[input_switch][BeaconLightSwitch][]
                 <[float64][Value][1.0]>
             >
-            <[input_switch][NavigationLightSwitch][0]
+            <[input_switch][NavigationLightSwitch][]
                 <[float64][Value][1.0]>
             >
-            <[input_switch][LandingLightSwitch][0]
-                <[float64][Value][1.0]>
-            >
-            <[input_switch][TaxiLightSwitch][0]
+            <[input_switch][LandingLightSwitch][]
                 <[float64][Value][1.0]>
             >
         >

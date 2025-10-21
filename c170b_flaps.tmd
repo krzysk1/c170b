@@ -11,7 +11,7 @@
             >
 
             // trim cruise
-            <[input_default][PitchTrim][]
+            <[input_default][ElevatorTrimInput][]
                 <[float64][Value][0.54]>
             >
         >
@@ -30,7 +30,7 @@
             >
 
             // trim takeoff
-            <[input_default][PitchTrim][]
+            <[input_default][ElevatorTrimInput][]
                 <[float64][Value][-0.18]>
             >
         >
@@ -49,7 +49,7 @@
             >
 
             // trim approach
-            <[input_default][PitchTrim][]
+            <[input_default][ElevatorTrimInput][]
                 <[float64][Value][-0.18]>
             >
         >
@@ -68,7 +68,7 @@
             >
 
             // trim landing
-            <[input_default][PitchTrim][]
+            <[input_default][ElevatorTrimInput][]
                 <[float64][Value][-0.446274428698863]>
             >
         >
