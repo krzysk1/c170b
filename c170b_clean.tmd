@@ -4,10 +4,10 @@
 
             // engine
             <[input_lever][ThrottleInput][]
-                <[float64][Value][0.720100473792554]>
+                <[float64][Value][0.72]>
             >
             <[servoclassic][ServoThrottle][]
-                <[float64][Position][0.720100473792555]>
+                <[float64][Position][0.72]>
             >
             <[multibody_joint][PropellerJoint][]
                 <[float64][InitialVelocity][238.2]>
@@ -39,4 +39,3 @@
         >
     >
 >
-

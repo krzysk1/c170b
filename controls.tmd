@@ -413,16 +413,15 @@
                 <[tmvector3d][Axis][-0.03150 0.0 0.0043]>
             >
             <[control_cylinder][StarterLever][]
-                <[string8][Type][lever]>
+                <[string8][Type][button]>
                 <[vector3_float64][R0][0.5365 0.2416 0.02625]>
                 <[matrix3_float64][B0][ 1.0 0.0 0.0  0.0 1.0 0.0  0.0 0.0 1.0 ]>
-                <[vector3_float64][Direction][1.0 0.0 0.0]>
+                <[vector3_float64][Direction][-1.0 0.0 0.0]>
                 <[string8][InputTransform][StarterLeverTranslation.Output]>
-                <[float64][StepDistance][0.002]>
-                <[control_message][OnStep][]
+                <[control_message][OnPush][]
                     <[string8][Message][Controls.Starter1]>
-                    <[string8][Qualifiers][step]>
-                    <[float64][Value][-1.0]>
+                    <[string8][Qualifiers][ event ]>
+                    <[float64][Value][1.0]>
                 >
                 <[float64][Radius][0.018]>
                 <[float64][Length][0.012]>
