@@ -1111,6 +1111,20 @@
                 <[float64][Radius][0.011]>
                 <[float64][Length][0.006]>
             >
+			// map zoom
+            <[control_box][MapZoomKnob][]
+                <[string8][Type][knob base]>
+                <[vector3_float64][R0][0.5370 -0.3721 0.01176]>
+                <[matrix3_float64][B0][ 0.9901 0.0 -0.1407  1.0 0.0 0.0  0.0 0.1407 0.9901 ]>
+                <[vector3_float64][Direction][ 0.9901 0.0 -0.1407 ]>
+                <[float64][StepAngle][0.3]>
+                <[control_message][OnRotate][]
+                    <[string8][Message][GPS.Zoom]>
+                    <[string8][Qualifiers][step]>
+                    <[float64][Value][0.2]>
+                >
+                <[vector3_float64][Dimensions][0.001 0.009 0.006]>
+            >			
 			// air ventilation
             <[control_input][AirVentLeftInput][]
                 <[uint32][InputID][AirVentLeft.Output]>

@@ -4,27 +4,18 @@
 
         >
         <[pointer_list_tmgraphics][GraphicObjects][]
-		
-            <[bendingbodygraphics][LeftFairing][]
+
+            <[rigidbodygraphics][LeftFairing][]
                 <[string8][GeometryList][ FairingL8 ]>
                 <[uint32][PositionID][LeftGear.R]>
                 <[uint32][OrientationID][LeftGear.Q]>
-                <[uint32][PositionID1][Fuselage.R]>
-                <[uint32][OrientationID1][Fuselage.Q]>
-                <[float64][Range0][1.2]>
-                <[float64][Range1][0.24]>
             >
-			
-            <[bendingbodygraphics][RightFairing][]
+
+            <[rigidbodygraphics][RightFairing][]
                 <[string8][GeometryList][ FairingR8 ]>
                 <[uint32][PositionID][RightGear.R]>
                 <[uint32][OrientationID][RightGear.Q]>
-                <[uint32][PositionID1][Fuselage.R]>
-                <[uint32][OrientationID1][Fuselage.Q]>
-                <[float64][Range0][-1.2]>
-                <[float64][Range1][-0.24]>
             >
-			
         >
     >
 >

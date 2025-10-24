@@ -1,0 +1,59 @@
+<[file][][]
+    <[modelmanager][][]
+        <[pointer_list_tmgraphics][DynamicObjects][]
+
+			// GPS zoom
+            <[input_discrete][GPSZoom][]
+                <[string8][Message][GPS.Zoom]>
+                <[string8][Range][ -6.0 3.0 ]>
+                <[float64][Value][-4.0]>
+                <[bool][Toggle][true]>
+            >
+            <[output_free][GPSZoomOutput][]
+                <[string8][Input][GPSZoom.Output]>
+            >
+        >
+        <[pointer_list_tmgraphics][GraphicObjects][]
+
+            <[hingedbodygraphics][GloveBoxDoor][]
+                <[string8][GeometryList][ Glove14 GpsDial60 ]>
+                <[string8][Input][0]>
+            >
+			//GPS map
+            <[movinggraphics][GpsScreen][]
+                <[string8][GeometryList][ GpsScreen ]>
+                <[uint32][PositionID][Fuselage.R]>
+                <[uint32][OrientationID][Fuselage.Q]>
+                <[uint32][InputID][AvionicsSwitch.Output]>
+                <[tmvector3d][Axis][0.9901 0.0 -0.1407]>
+                <[float64][Scaling][-0.01]>
+                <[float64][Offset][0.01]>
+            >
+            <[texture_animation][DisplayTexture][]
+                <[string8][TextureName][gps_color]>
+                <[string8][RenderList][ DisplayMap DisplayMapAircraft ]>
+            >
+            <[graphics_input][GPSZoom][]
+                <[uint32][InputID][GPSZoom.Output]>
+                <[float64][Scaling][1.0]>
+                <[float64][Offset][6.0]>
+            >
+            <[texture_animation_map_display][DisplayMap][]
+                <[uint32][PositionID][Fuselage.R]>
+                <[uint32][OrientationID][Fuselage.Q]>
+                <[tmvector2d][TargetPosition][ 0.0 0.0 ]>
+                <[tmvector2d][TargetSize][ 1.0 1.0 ]>
+                <[tmvector2d][TargetScale][ 512 512 ]>
+                <[string8][InputZoom][GPSZoom.Output]>
+            >
+            <[texture_animation_rectangle][DisplayMapAircraft][]
+                <[tmvector2d][TargetPosition][ 251 256 ]>
+                <[tmvector2d][TargetSize][ 10 10 ]>
+                <[tmvector2d][TargetScale][ 512 512 ]>
+                <[tmvector2d][SourcePosition][ 0 64 ]>
+                <[tmvector2d][SourceSize][ 64 64 ]>
+                <[tmvector2d][SourceScale][ 512 512 ]>
+            >
+        >
+    >
+>
