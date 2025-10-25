@@ -822,27 +822,22 @@
                 <[matrix3_float64][B0][ 0.9888 0.0 -0.1493  0.0 1.0 0.0  0.1493 0.0 0.9888 ]>
                 <[vector3_float64][Direction][0.9888 0.0 -0.1493]>
                 <[float64][StepAngle][0.4]>
-                <[control_message][OnPush][]
-                    <[string8][Message][Communication.ADF1Test]>
-                    <[string8][Qualifiers][toggle]>
-                    <[float64][Value][1.0]>
-                >
                 <[control_message][OnRotate][]
-                    <[string8][Message][Communication.ADF1Heading]>
+                    <[string8][Message][Navigation.ADF1Course1]>
                     <[string8][Qualifiers][step]>
                     <[float64][Value][1.0]>
                 >
                 <[float64][Radius][0.006]>
                 <[float64][Length][0.017]>
             >
-            <[control_cylinder][ADF1Mode][]
+            <[control_cylinder][ADF1Volume][]
                 <[string8][Type][knob]>
                 <[vector3_float64][R0][0.5228 -0.2401 -0.0618]>
                 <[matrix3_float64][B0][ 0.9888 0.0 -0.1493  0.0 1.0 0.0  0.1493 0.0 0.9888 ]>
                 <[vector3_float64][Direction][0.9888 0.0 -0.1493]>
                 <[float64][StepAngle][0.4]>
                 <[control_message][OnRotate][]
-                    <[string8][Message][Communication.ADF1Mode]>
+                    <[string8][Message][ADF.Volume]>
                     <[string8][Qualifiers][step]>
                     <[float64][Value][1.0]>
                 >
@@ -1036,12 +1031,25 @@
             >
             <[control_box][AudioSelectionNAV1Switch][]
                 <[string8][Type][switch toggle]>
-                <[tmvector3d][R0][ 0.541 -0.1849 0.0373 ]>
+                <[tmvector3d][R0][ 0.541 -0.1691 0.0373 ]>
                 <[tmmatrix3d][B0][ 1.0 0.0 0.0  0.0 1.0 0.0  0.0 0.0 1.0 ]>
                 <[tmvector3d][Direction][ 0.0 0.0 1.0 ]>
                 <[float64][StepDistance][0.01]>
                 <[control_message][OnStep][]
                     <[string8][Message][Communication.AudioNAV1]>
+                    <[string8][Qualifiers][step]>
+                    <[float64][Value][1.0]>
+                >
+                <[tmvector3d][Dimensions][ 0.013 0.005 0.008 ]>
+            >
+            <[control_box][AudioSelectionNAV2Switch][]
+                <[string8][Type][switch toggle]>
+                <[tmvector3d][R0][ 0.541 -0.1849 0.0373 ]>
+                <[tmmatrix3d][B0][ 1.0 0.0 0.0  0.0 1.0 0.0  0.0 0.0 1.0 ]>
+                <[tmvector3d][Direction][ 0.0 0.0 1.0 ]>
+                <[float64][StepDistance][0.01]>
+                <[control_message][OnStep][]
+                    <[string8][Message][Communication.AudioNAV2]>
                     <[string8][Qualifiers][step]>
                     <[float64][Value][1.0]>
                 >
@@ -1124,7 +1132,7 @@
                     <[float64][Value][0.2]>
                 >
                 <[vector3_float64][Dimensions][0.001 0.009 0.006]>
-            >			
+            >
 			// air ventilation
             <[control_input][AirVentLeftInput][]
                 <[uint32][InputID][AirVentLeft.Output]>

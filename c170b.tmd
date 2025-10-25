@@ -149,7 +149,7 @@
             >
             <[collisionhull][CollisionFuselage][]
                 <[string8][Body][Fuselage]>
-                <[string8][Geometry][Fuselaje0018]>
+                <[string8][Geometry][Fuselaje]>
                 <[float64][K][2188000]>
                 <[float64][D][21880]>
                 <[bool][InstantCrash][true]>
@@ -1772,29 +1772,14 @@
                 <[string8][Input][ADF1.OutputBearing]>
             >
 
-            <[input_binary][ADF1AntennaMode][]
-                <[string8][Message][Navigation.ADF1AntennaMode]>
-                <[float64][Value][0.0]>
+            <[input_cyclic][ADF1SelectedCourse][]
+                <[string8][Message][Navigation.ADF1Course1]>
+                <[tmvector2d][Range][ 0.0 6.283185 ]>
+                <[uint][StepSize][0.0174532]>
+                <[uint][Value][1.570796314627]>
             >
-            <[output_free][ADF1AntennaModeOutput][]
-                <[string8][Input][ADF1AntennaMode.Output]>
-            >
-            <[sender][SenderADF1AntennaMode][]
-                <[string8][Input][ADF1AntennaMode.Output]>
-                <[string8][Message][Navigation.ADF1AntennaMode]>
-                <[string8][Qualifiers][ discrete ]>
-            >
-            <[input_binary][ADF1BeatFrequencyOscillatorMode][]
-                <[string8][Message][Navigation.ADF1BeatFrequencyOscillatorMode]>
-                <[float64][Value][0.0]>
-            >
-            <[output_free][ADF1BeatFrequencyOscillatorModeOutput][]
-                <[string8][Input][ADF1BeatFrequencyOscillatorMode.Output]>
-            >
-            <[sender][SenderADF1BeatFrequencyOscillatorMode][]
-                <[string8][Input][ADF1BeatFrequencyOscillatorMode.Output]>
-                <[string8][Message][Navigation.ADF1BeatFrequencyOscillatorMode]>
-                <[string8][Qualifiers][ discrete ]>
+            <[output_free][ADF1SelectedCourseOutput][]
+                <[string8][Input][ADF1SelectedCourse.Output]>
             >
 
             // ADF2
@@ -1886,6 +1871,71 @@
             // transponder end
 
             // animations start
+
+			// audio selection switches
+            <[input_switch][AudioSelectionCOM1Switch][]
+                <[string8][Message][Communication.AudioCOM1]>
+                <[string8][Events][ SwitchSound.Trigger ]>
+                <[string8][EventsRelease][ SwitchSound.Trigger ]>
+                <[float64][Value][0.0]>
+            >
+            <[output][AudioSelectionCOM1SwitchOn][]
+                <[string8][Input][AudioSelectionCOM1Switch.Output]>
+            >
+            <[input_switch][AudioSelectionCOM2Switch][]
+                <[string8][Message][Communication.AudioCOM2]>
+                <[string8][Events][ SwitchSound.Trigger ]>
+                <[string8][EventsRelease][ SwitchSound.Trigger ]>
+                <[float64][Value][0.0]>
+            >
+            <[output][AudioSelectionCOM2SwitchOn][]
+                <[string8][Input][AudioSelectionCOM2Switch.Output]>
+            >
+            <[input_switch][AudioSelectionNAV1Switch][]
+                <[string8][Message][Communication.AudioNAV1]>
+                <[string8][Events][ SwitchSound.Trigger ]>
+                <[string8][EventsRelease][ SwitchSound.Trigger ]>
+                <[float64][Value][0.0]>
+            >
+            <[output][AudioSelectionNAV1SwitchOn][]
+                <[string8][Input][AudioSelectionNAV1Switch.Output]>
+            >
+            <[input_switch][AudioSelectionNAV2Switch][]
+                <[string8][Message][Communication.AudioNAV2]>
+                <[string8][Events][ SwitchSound.Trigger ]>
+                <[string8][EventsRelease][ SwitchSound.Trigger ]>
+                <[float64][Value][0.0]>
+            >
+            <[output][AudioSelectionNAV2SwitchOn][]
+                <[string8][Input][AudioSelectionNAV2Switch.Output]>
+            >
+            <[input_switch][AudioSelectionADF1Switch][]
+                <[string8][Message][Communication.AudioADF1]>
+                <[string8][Events][ SwitchSound.Trigger ]>
+                <[string8][EventsRelease][ SwitchSound.Trigger ]>
+                <[float64][Value][0.0]>
+            >
+            <[output][AudioSelectionADF1SwitchOn][]
+                <[string8][Input][AudioSelectionADF1Switch.Output]>
+            >
+            <[input_switch][AudioSelectionMarkerSwitch][]
+                <[string8][Message][Communication.AudioMarker]>
+                <[string8][Events][ SwitchSound.Trigger ]>
+                <[string8][EventsRelease][ SwitchSound.Trigger ]>
+                <[float64][Value][0.0]>
+            >
+            <[output][AudioSelectionMarkerSwitchOn][]
+                <[string8][Input][AudioSelectionMarkerSwitch.Output]>
+            >
+            <[input_switch][AudioSelectionDMESwitch][]
+                <[string8][Message][Communication.AudioDME]>
+                <[string8][Events][ SwitchSound.Trigger ]>
+                <[string8][EventsRelease][ SwitchSound.Trigger ]>
+                <[float64][Value][0.0]>
+            >
+            <[output][AudioSelectionDMESwitchOn][]
+                <[string8][Input][AudioSelectionDMESwitch.Output]>
+            >
 
             // fuel selector
             <[input_discrete][FuelSelectorInput][]
@@ -2366,47 +2416,27 @@
                 <[string8][InputTransform][CockpitMoving_179.Output]>
             >
 			// panel_brightness
-            <[graphics_input][CockpitInput_21][]
-                <[uint32][InputID][PanelLightOn.Output]>
-            >
-            <[graphics_linear_interpolation][CockpitMapping_187][]
-                <[string8][Input][CockpitInput_21.Output]>
-                <[tmvector2d][Map][(0.0 0.0) (1.0 0.006400)]>
-            >
-            <[graphics_translation][CockpitMoving_187][]
-                <[string8][Input][CockpitMapping_187.Output]>
-                <[tmvector3d][Axis][0.0 0.0064 0.0]>
-            >
-            <[rigidbodygraphics][interruptor_0][]
+            <[movinggraphics][RoofRearCabinLightSwitch][]
                 <[string8][GeometryList][ Interruptor0 ]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
-                <[string8][InputTransform][CockpitMoving_187.Output]>
-            >
-			// instrument_brightness_ratio
-            <[graphics_input][CockpitInput_6][]
-                <[uint32][InputID][InstrumentsLightOn.Output]>
-            >
-            <[graphics_linear_interpolation][CockpitMapping_191][]
-                <[string8][Input][CockpitInput_6.Output]>
-                <[tmvector2d][Map][(0.0 0.0) (1.0 0.006400)]>
-            >
-            <[graphics_translation][CockpitMoving_191][]
-                <[string8][Input][CockpitMapping_191.Output]>
+                <[uint32][InputID][PanelLightOn.Output]>
                 <[tmvector3d][Axis][0.0 0.0064 0.0]>
             >
-            <[rigidbodygraphics][interruptor_002_0][]
+			// instrument_brightness_ratio
+            <[movinggraphics][RoofFrontCabinLightSwitch][]
                 <[string8][GeometryList][ Interruptor0020 ]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
-                <[string8][InputTransform][CockpitMoving_191.Output]>
+                <[uint32][InputID][InstrumentsLightOn.Output]>
+                <[tmvector3d][Axis][0.0 0.0064 0.0]>
             >
 			// audio_selection_com1
             <[hingedbodygraphics][AudioCOM1Swith][]
                 <[string8][GeometryList][ Audio1Com1Sw0 ]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
-                <[uint32][InputID][AvionicsSwitch.Output]>
+                <[uint32][InputID][AudioSelectionCOM1SwitchOn.Output]>
                 <[float64][Scaling][0.610865]>
                 <[tmvector3d][Axis][ 0.0 -1.0 0.0 ]>
                 <[tmvector3d][Pivot][0.5465 -0.1376 0.0373]>
@@ -2416,7 +2446,7 @@
                 <[string8][GeometryList][ Audio1Com2Sw0 ]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
-                <[uint32][InputID][AvionicsSwitch.Output]>
+                <[uint32][InputID][AudioSelectionCOM2SwitchOn.Output]>
                 <[float64][Scaling][0.610865]>
                 <[tmvector3d][Axis][ 0.0 -1.0 0.0 ]>
                 <[tmvector3d][Pivot][0.5465 -0.1535 0.0373]>
@@ -2426,7 +2456,7 @@
                 <[string8][GeometryList][ Audio1Nav1Sw0 ]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
-                <[uint32][InputID][AvionicsSwitch.Output]>
+                <[uint32][InputID][AudioSelectionNAV1SwitchOn.Output]>
                 <[float64][Scaling][0.610865]>
                 <[tmvector3d][Axis][ 0.0 -1.0 0.0 ]>
                 <[tmvector3d][Pivot][0.5465 -0.1691 0.0373]>
@@ -2436,37 +2466,37 @@
                 <[string8][GeometryList][ Audio1Nav2Sw0 ]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
-                <[uint32][InputID][AvionicsSwitch.Output]>
+                <[uint32][InputID][AudioSelectionNAV2SwitchOn.Output]>
                 <[float64][Scaling][0.610865]>
                 <[tmvector3d][Axis][ 0.0 -1.0 0.0 ]>
                 <[tmvector3d][Pivot][0.5465 -0.1849 0.0373]>
             >
 			// audio_selection_adf1
-            <[hingedbodygraphics][AudioADFSwitch][]
+            <[hingedbodygraphics][AudioADF1Switch][]
                 <[string8][GeometryList][ Audio1AdfSw0 ]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
-                <[uint32][InputID][AvionicsSwitch.Output]>
+                <[uint32][InputID][AudioSelectionADF1SwitchOn.Output]>
                 <[float64][Scaling][0.610865]>
                 <[tmvector3d][Axis][ 0.0 -1.0 0.0 ]>
                 <[tmvector3d][Pivot][0.5465 -0.2003 0.0373]>
             >
 			// audio_marker_enabled
-            <[hingedbodygraphics][AudioDMESwitch][]
+            <[hingedbodygraphics][AudioMarkerSwitch][]
                 <[string8][GeometryList][ Audio1DmeSw0 ]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
-                <[uint32][InputID][AvionicsSwitch.Output]>
+                <[uint32][InputID][AudioSelectionMarkerSwitchOn.Output]>
                 <[float64][Scaling][0.610865]>
                 <[tmvector3d][Axis][ 0.0 -1.0 0.0 ]>
                 <[tmvector3d][Pivot][0.5465 -0.2164 0.0373]>
             >
 			// audio_dme_enabled
-            <[hingedbodygraphics][AudioMarkersSwitch][]
+            <[hingedbodygraphics][AudioDMESwitch][]
                 <[string8][GeometryList][ Audio1MkrSw0 ]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
-                <[uint32][InputID][AvionicsSwitch.Output]>
+                <[uint32][InputID][AudioSelectionDMESwitchOn.Output]>
                 <[float64][Scaling][0.610865]>
                 <[tmvector3d][Axis][ 0.0 -1.0 0.0 ]>
                 <[tmvector3d][Pivot][0.5465 -0.2321 0.0373]>
@@ -2539,7 +2569,7 @@
                 <[string8][GeometryList][ AdfDial40 ]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
-                <[uint32][InputID][AvionicsSwitch.Output]>
+                <[uint32][InputID][ADFVolume.Output]>
                 <[float64][Scaling][2.185152]>
                 <[tmvector3d][Axis][ 0.9888 0.0 -0.1493 ]>
                 <[tmvector3d][Pivot][0.5323 -0.24 -0.0632]>
@@ -2579,7 +2609,7 @@
                 <[string8][GeometryList][ AdfDial50 ]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
-                <[uint32][InputID][ServoCheck.Output]>
+                <[uint32][InputID][ADF1SelectedCourse.Output]>
                 <[float64][Scaling][3.141593]>
                 <[tmvector3d][Axis][ -0.9888 0.0 0.1493 ]>
                 <[tmvector3d][Pivot][0.5322 -0.1385 -0.0643]>
@@ -2641,7 +2671,7 @@
 			// Fuselage
 
             <[rigidbodygraphics][Fuselage][]
-                <[string8][GeometryList][ Obj18 Estabilizador8 Fuselaje0018 Glass1 Glass2 GlassIntBack AdfGlass3 GlassInt5 ]>
+                <[string8][GeometryList][ Fuselaje Antennas Estabilizador8  Glass1 Glass2 GlassIntBack AdfGlass3 GlassInt5 ]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
             >

@@ -41,7 +41,7 @@
 		<[float64][MaximumSpeed]      [62.0]>
 		<[float64][MinimumAirspeed]   [21.5]>
         <[float64][ApproachAirspeed]  [25.3]>
-        <[float64][CruiseAirspeed]    [51.1]>
+        <[float64][CruiseAirspeed]    [52.5]>
         <[float64][CruiseSpeed]       [70.0]>
         <[float64][MaximumAltitude]   [4724.0]>
         <[float64][CruiseAltitude]    [1826.0]>
