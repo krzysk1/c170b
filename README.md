@@ -4,7 +4,7 @@ Cessna 170b
 The Cessna 170 is a light, single-engined, general aviation aircraft produced by the Cessna Aircraft Company between 1948 and 1956.	(From Wikipedia, the free encyclopedia)
 
 This is free add-on for Aerofly FS4 created by Krzysztof Kaniewski with the Aerofly FS4 SDK.  
-3D model by Adrian Fernandez Gomez (Alcalá Simulación, www.alcala-sim.com).
+3D model by Adrian Fernandez Gomez (Alcalá Simulación, www.alcala-sim.com). Previously, the model was developed with permission in AFS1 and AFS2.
 
  Some features may not work as intended and this aircraft could crash your Aerofly FS4. 
  Use it at your own risk!
@@ -24,6 +24,23 @@ GliderEngine button - turn on/off engines, open/close doors.
 Change simulation level to turn on/off GPS and wheel fairings.
 
 # Resources
+
+3d model can be found here: http://forums.x-plane.org/index.php?app=downloads&showfile=22871
+
+Textures:
+c_gexz   Leen "Flybike" de Jager https://forums.x-plane.org/files/file/23114-cessna-170b-canadian-c-gexz-livery/
+d_escb
+ec_afb
+ec_avj
+g_apvs
+lv_fob
+n3533c
+n1899c
+d_escb_old
+oe_dad
+vh_cas bendyflyer https://forums.x-plane.org/files/file/88098-cessna-170b-xp12-v20-vh-cas-later-livery/
+
+Date: Nov 2015 (AFS1) to Aug 2022; May 2023 (AFS4); Oct 2025
 
 Aircraft Technical Data & Specifications: http://www.airliners.net/aircraft-data/cessna-170/139
 
