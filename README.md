@@ -17,12 +17,6 @@ This is free add-on for Aerofly FS4 created by Krzysztof Kaniewski with the Aero
 
 1. Delete the folder "c170b".
 
-# Tips
-
-GliderEngine button - turn on/off engines, open/close doors.
-
-Change simulation level to turn on/off GPS and wheel fairings.
-
 # Resources
 
 Aircraft Technical Data & Specifications: http://www.airliners.net/aircraft-data/cessna-170/139
